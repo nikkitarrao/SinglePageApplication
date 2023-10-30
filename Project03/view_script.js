@@ -7,4 +7,4 @@ document.addEventListener('DOMContentLoaded', function() {
       else
         document.querySelector('#submit').disabled = true;
   };
-
+}
