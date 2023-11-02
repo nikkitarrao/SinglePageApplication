@@ -27,6 +27,14 @@ function updateDom(){
  // let question = 
 }
 
+//Rendering View
+  var renderView = (viewID, modelIndex) => {
+      var source = document.querySelector(viewID).innerHTML;
+      var template = Handlebars.compile(source);
+      var html = template(model[modelIndex]);
+      document.querySelector('#display-data').innerHTML = html;
+    }
+
 
 
 
