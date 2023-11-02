@@ -9,8 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#submit').disabled = true;
   };
 
-//Saving the entered name
+document.querySelector('#form').onsubmit = () => {
+  //Saving the entered name
   var name = document.querySelector('#name').value;
+  return false; 
+}
   
 //Asynchronous Network Request
 async function backEndRestAPI(){
