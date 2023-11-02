@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelector('#form').onsubmit = () => {
   //Saving the entered name
   var name = document.querySelector('#name').value;
+  alert(`${name}`);
   return false; 
 }
   
