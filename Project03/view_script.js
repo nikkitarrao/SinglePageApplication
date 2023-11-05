@@ -15,27 +15,27 @@ document.querySelector('#form').onsubmit = () => {
   alert(`${name}`);
   return false; 
 }
+
   
 //Asynchronous Network Request
 async function backEndRestAPI(){
-  const response = await fetch('https://www.ixl.com/math/grade-4/identify-place-value-names');
-  const data = await response.json;
+  const response = await fetch('https://www.ixl.com/math/grade-4/identify-place-value-names')
+  const data = await response.json()
   updateDom(data);
 }
   
 //Updating DOM  
 function updateDom(){
- // let question = 
+  html = renderView(model, '#quiz_view1');
+  document.querySelector('#display-data').innerHTML = html;
 }
 
 //Rendering View
-  var renderView = (viewID, modelIndex) => {
-      var source = document.querySelector(viewID).innerHTML;
+  var renderView = (model, view) => {
+      var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
-      var html = template(model[modelIndex]);
-      document.querySelector('#display-data').innerHTML = html;
+      //var html = template(model[modelIndex]);
     }
-
 
 
 
