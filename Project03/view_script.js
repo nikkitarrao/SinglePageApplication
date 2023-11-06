@@ -14,6 +14,13 @@ document.querySelector('#form').onsubmit = () => {
   var name = document.querySelector('#name').value;
   alert(`${name}`);
   return false; 
+  //choosing the type of quiz
+  if(document.querySelector('#quiz-selection').value === "1"){
+    //load quiz 1
+  }
+  else{
+    //load quiz 2
+  }
 }
 
   
