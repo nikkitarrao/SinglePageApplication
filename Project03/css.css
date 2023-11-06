@@ -1,3 +1,11 @@
 body{background-color: #FFF9DD; color: #41FF00; }
 .jumbotron{background-color: black;}
 hr{color: #41FF00;}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; 
+}
