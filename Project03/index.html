@@ -32,12 +32,28 @@
 <br>  
 <form id = "form" >
 <div> <p> Name: <input id = "name" autocomplete = "off" autofocus placeholder = "type your name here" type = "text"> </p> </div>
-<div> <label for="quiz-choice">Which quiz would you like to take?: </label>
+
+
+ <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="quiz-choice" id="quiz-choice">
+    Which quiz would you like to take? <span class="caret"> </span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li value="quiz1">Quiz 1</li>
+      <li value="quiz2">Quiz 2</li>
+    </ul>
+
+
+
+ <!-- <div> <label for="quiz-choice">Which quiz would you like to take?: </label>  
   <select name="quiz-choice" id="quiz-choice">
   <option value="quiz1"> QUIZ 1 </option>
   <option value="quiz2"> QUIZ 2 </option>
-  </select> </div>
+  </select> </div> -->
    <br>
+
+
+
+
+  
 <div> <input id = "submit" type = "submit"> </div>  
 </form>
 
