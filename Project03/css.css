@@ -5,7 +5,14 @@ hr{color: #41FF00;}
   position: relative;
   font-family: Arial;
 }
-
 .custom-select select {
   display: none; 
+}
+.select-selected {
+  background-color: black;
+  color: #41FF00;
+}
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
 }
