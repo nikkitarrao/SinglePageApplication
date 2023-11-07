@@ -25,10 +25,12 @@ document.querySelector('#form').onsubmit = () => {
 
   
 //Asynchronous Network Request
-async function backEndRestAPI(){
-  const response = await fetch('https://www.ixl.com/math/grade-4/identify-place-value-names')
+async function backEndRestAPI(quizId,qid){
+  let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizid}/questions/${qid}`
+  const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
   updateDom(data);
+  
 }
   
 //Updating DOM  
