@@ -32,11 +32,6 @@ async function backEndRestAPI(quizId,qid){
   updateDom(data);
 }
   
-//Updating DOM  
-function updateDom(){
-  html = renderView(model, '#quiz_view1');
-  document.querySelector('#display-data').innerHTML = html;
-}
 
 //Rendering View
   var renderView = (model, view) => {
@@ -44,6 +39,12 @@ function updateDom(){
       var template = Handlebars.compile(source);
       //var html = template(model[modelIndex]);
     }
+
+  //Updating DOM  
+function updateDom(){
+  html = renderView(model, '#quiz_view1');
+  document.querySelector('#display-data').innerHTML = html;
+}
 
 
 
