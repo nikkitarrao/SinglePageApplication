@@ -16,11 +16,12 @@
             "prompt": "How do you declare an ArrayList of type Integer named 'values?' ",
             "choices": [
                 "ArrayList values = new ArrayList<Integer>();",
-                "ArrayList values = new ArrayList<Int>();",
+                "ArrayList values = new ArrayList<int>();",
                 "ArrayList values = new ArrayList<Integer>;",
-                "ArrayList values = new ArrayList<Int>;"
+                "ArrayList values = new ArrayList<int>;"
             ],
-            "correctChoice": 0
+            "correctChoice": 0,
+            "Explanation": "Sorry you were wrong, the correct answer is A. ArrayList values = new ArrayList<Integer>(). ArrayLists cannot be composed of primitive data types, and since int is a primative type, you must use the wrapper class version of int, Integer. Also, ArrayList is a class, which is why is must include parenthases at the end."
         },
         {
             "id": 2,
