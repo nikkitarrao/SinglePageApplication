@@ -1,18 +1,38 @@
 {
-    "questions": [
-        {
-            "id": 1,
-            "type": "mult",
-            "prompt": "What is the sum of 1 + 1?",
-            "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
-            ],
-            "correctChoice": 0
-        }
-    ],
+    "quiz1": {
+        "name": "Java",
+        "questions": [
+            {
+                "id": 1,
+                "type": "mult",
+                "prompt": "What is the sum of 1 + 1?",
+                "choices": [
+                    "2",
+                    "-2",
+                    "11",
+                    "5"
+                ],
+                "correctChoice": 0
+            }
+        ]
+    },
+    "quiz2": {
+        "name": "C++ quiz",
+        "questions": [
+            {
+                "id": 1,
+                "type": "mult",
+                "prompt": "What is the sum of 1 + 2?",
+                "choices": [
+                    "2",
+                    "-2",
+                    "11",
+                    "3"
+                ],
+                "correctChoice": 3
+            }
+        ]
+    },
     "profile": {
         "name": "typicode"
     }
