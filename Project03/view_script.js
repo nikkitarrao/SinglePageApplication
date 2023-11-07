@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelector('#form').onsubmit = () => {
   //Saving the entered name
   var name = document.querySelector('#name').value;
-  alert(`${name}`);
-  return false; 
   //choosing the type of quiz
   if(document.querySelector('#quiz-selection').value === "1"){
     quizId = "questionsQ1";
@@ -21,6 +19,7 @@ document.querySelector('#form').onsubmit = () => {
   else{
    quizId  = "questionsQ2";
   }
+  return false; 
 }
 
   
