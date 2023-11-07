@@ -5,7 +5,7 @@
             "title": "JavaQuiz"
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "JavascriptQuiz"
         }
     ],
@@ -74,7 +74,7 @@
     "questionsQ2": [
         {
             "id": 1,
-            "type": "mult",
+            "type": "multipleChoice",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
                 "2",
@@ -85,8 +85,8 @@
             "correctChoice": 0
         },
         {
-            "id": 1,
-            "type": "mult",
+            "id": 2,
+            "type": "narrative",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
                 "2",
@@ -95,6 +95,42 @@
                 "5"
             ],
             "correctChoice": 0
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 4,
+            "type": "image",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "prompt": "?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 3
         }
     ]
 }
