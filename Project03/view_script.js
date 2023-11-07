@@ -16,10 +16,10 @@ document.querySelector('#form').onsubmit = () => {
   return false; 
   //choosing the type of quiz
   if(document.querySelector('#quiz-selection').value === "1"){
-    //load quiz 1
+    quizId = "questionsQ1";
   }
   else{
-    //load quiz 2
+   quizId  = "questionsQ2";
   }
 }
 
@@ -30,7 +30,6 @@ async function backEndRestAPI(quizId,qid){
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
   updateDom(data);
-  
 }
   
 //Updating DOM  
