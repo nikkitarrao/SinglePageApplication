@@ -1,41 +1,100 @@
 {
-    "quiz1": {
-        "id": 1,
-        "name": "Java",
-        "questions": [
-            {
-                "id": 1,
-                "type": "mult",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0
-            }
-        ]
-    },
-    "quiz2": {
-        "id": 2,
-        "name": "C++ quiz",
-        "questions": [
-            {
-                "id": 1,
-                "type": "mult",
-                "prompt": "What is the sum of 1 + 2?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "3"
-                ],
-                "correctChoice": 3
-            }
-        ]
-    },
-    "profile": {
-        "name": "typicode"
-    }
+    "quizDetails": [
+        {
+            "id": 1,
+            "title": "JavaQuiz"
+        },
+        {
+            "id": 1,
+            "title": "JavascriptQuiz"
+        }
+    ],
+    "questionsQ1": [
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "prompt": "How do you declare an ArrayList of type Integer named 'values?' ",
+            "choices": [
+                "ArrayList values = new ArrayList<Integer>();",
+                "ArrayList values = new ArrayList<Int>();",
+                "ArrayList values = new ArrayList<Integer>;",
+                "ArrayList values = new ArrayList<Int>;"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 2,
+            "type": "narrative",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 4,
+            "type": "image",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "prompt": "?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 3
+        }
+    ],
+    "questionsQ2": [
+        {
+            "id": 1,
+            "type": "mult",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        },
+        {
+            "id": 1,
+            "type": "mult",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0
+        }
+    ]
 }
