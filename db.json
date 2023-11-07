@@ -1,5 +1,6 @@
 {
     "quiz1": {
+        "id": 1,
         "name": "Java",
         "questions": [
             {
@@ -17,6 +18,7 @@
         ]
     },
     "quiz2": {
+        "id": 2,
         "name": "C++ quiz",
         "questions": [
             {
