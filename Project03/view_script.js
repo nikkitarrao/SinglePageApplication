@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+document.querySelector('#button').onsubmit = () => {
+  //Rendering Inital View
+  view1 = renderView("#initialScreen")
+  document.querySelector('#display-data').innerHTML = view1;
+}
   
   //Disabling the button unless there is something typed
   document.querySelector('#submit').disabled = true;
@@ -29,23 +35,20 @@ async function backEndRestAPI(quizId,qid){
   updateDom(data);
 }
 
+} //ending the onsubmit event
+
 //Rendering View
   var renderView = (model, view) => {
       var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
-      //var html = template(model[modelIndex]);
+      var html = template(model[modelIndex]);
     }
-
-  //Updating DOM  
+  
+//Updating DOM  
 function updateDom(){
   html = renderView(model, '#quiz_view1');
   document.querySelector('#display-data').innerHTML = html;
 }
-
-} //ending the onsubmit event
-
-
-
 
 
 
