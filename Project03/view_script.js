@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-document.querySelector('#button').onsubmit = () => {
+document.querySelector('#button').onload = () => {
   //Rendering Inital View
   view1 = renderView("#initialScreen")
   document.querySelector('#display-data').innerHTML = view1;
+  return false;
 }
   
   //Disabling the button unless there is something typed
@@ -32,23 +33,27 @@ async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizid}/${qid}`
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
-  updateDom(data);
+
+  
+  //updateDom(data);
 }
 
 } //ending the onsubmit event
 
-//Rendering View
-  var renderView = (model, view) => {
+    //Rendering View and Update DOM
+  var renderView = (view) => {
       var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
-      var html = template(model[modelIndex]);
+      var html = template({name: "Nikki"});
+      document.querySelector('#display-data').innerHTML = html;
     }
+
   
 //Updating DOM  
-function updateDom(){
-  html = renderView(model, '#quiz_view1');
-  document.querySelector('#display-data').innerHTML = html;
-}
+//function updateDom(view){
+//  html = renderView(view);
+  
+//}
 
 
 
