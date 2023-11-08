@@ -1,144 +1,146 @@
 {
-    "questionsQ1": {
-        "id": 1,
-        "title": "JavaQuiz",
-        "questions": [
-            {
-                "id": 1,
-                "type": "multipleChoice",
-                "prompt": "How do you declare an ArrayList of type Integer named 'values?' ",
-                "choices": [
-                    "ArrayList values = new ArrayList<Integer>();",
-                    "ArrayList values = new ArrayList<int>();",
-                    "ArrayList values = new ArrayList<Integer>;",
-                    "ArrayList values = new ArrayList<int>;"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry you were wrong, the correct answer is A. ArrayList values = new ArrayList<Integer>(). ArrayLists cannot be composed of primitive data types, and since int is a primative type, you must use the wrapper class version of int, Integer. Also, ArrayList is a class, which is why is must include parenthases at the end."
-            },
-            {
-                "id": 2,
-                "type": "narrative",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 3,
-                "type": "multipleChoice",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 4,
-                "type": "image",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 5,
-                "type": "multipleChoice",
-                "prompt": "?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 3,
-                "explanation": "Sorry"
-            }
-        ]
-    },
-    "questionsQ2": {
-        "id": 2,
-        "title": "JavascriptQuiz",
-        "questions": [
-            {
-                "id": 1,
-                "type": "multipleChoice",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 2,
-                "type": "narrative",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 3,
-                "type": "multipleChoice",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 4,
-                "type": "image",
-                "prompt": "What is the sum of 1 + 1?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 0,
-                "explanation": "Sorry"
-            },
-            {
-                "id": 5,
-                "type": "multipleChoice",
-                "prompt": "?",
-                "choices": [
-                    "2",
-                    "-2",
-                    "11",
-                    "5"
-                ],
-                "correctChoice": 3,
-                "explanation": "Sorry"
-            }
-        ]
-    }
+    "quizDetails": [
+        {
+            "id": 1,
+            "title": "JavaQuiz"
+        },
+        {
+            "id": 1,
+            "title": "JavascriptQuiz"
+        }
+    ],
+    "questionsQ1": [
+        {
+            "id": 1,
+            "type": "multipleChoice",
+            "prompt": "How do you declare an ArrayList of type Integer named 'values?' ",
+            "choices": [
+                "ArrayList values = new ArrayList<Integer>();",
+                "ArrayList values = new ArrayList<int>();",
+                "ArrayList values = new ArrayList<Integer>;",
+                "ArrayList values = new ArrayList<int>;"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry you were wrong, the correct answer is A. ArrayList values = new ArrayList<Integer>(). ArrayLists cannot be composed of primitive data types, and since int is a primative type, you must use the wrapper class version of int, Integer. Also, ArrayList is a class, which is why is must include parenthases at the end."
+        },
+        {
+            "id": 2,
+            "type": "narrative",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 3,
+            "type": "multipleChoice",
+            "prompt": "What method has the same name as the class and no return type?",
+            "choices": [
+                "compare To method",
+                "constructor method",
+                "",
+                ""
+            ],
+            "correctChoice": 1,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 4,
+            "type": "image",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 5,
+            "type": "multipleChoice",
+            "prompt": "?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 3,
+            "explanation": "Sorry"
+        }
+    ],
+    "questionsQ2": [
+        {
+            "id": 6,
+            "type": "multipleChoice",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 7,
+            "type": "narrative",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 8,
+            "type": "multipleChoice",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 9,
+            "type": "image",
+            "prompt": "What is the sum of 1 + 1?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 0,
+            "explanation": "Sorry"
+        },
+        {
+            "id": 10,
+            "type": "multipleChoice",
+            "prompt": "?",
+            "choices": [
+                "2",
+                "-2",
+                "11",
+                "5"
+            ],
+            "correctChoice": 3,
+            "explanation": "Sorry"
+        }
+    ]
 }
