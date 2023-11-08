@@ -28,17 +28,16 @@ document.querySelector('#form').onsubmit = () => {
   }
   return false; 
 
-//Asynchronous Network Request
+
+
+} //ending the onsubmit event
+
+  //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizid}/${qid}`
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
-
-  
-  //updateDom(data);
 }
-
-} //ending the onsubmit event
 
     //Rendering View and Update DOM
   var renderView = (view) => {
