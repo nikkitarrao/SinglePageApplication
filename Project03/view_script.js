@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = () => {
-  document.querySelector('#display-data').innerHTML = "hi";
   //Rendering Inital View
-  //view1 = renderView("#initialScreen")
- // document.querySelector('#display-data').innerHTML = view1;
+  view1 = renderView("#initialScreen")
+  document.querySelector('#display-data').innerHTML = view1;
   //return false;
 }
   
