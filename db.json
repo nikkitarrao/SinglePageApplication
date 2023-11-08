@@ -78,7 +78,7 @@
     ],
     "questionsQ2": [
         {
-            "id": 6,
+            "id": 1,
             "type": "multipleChoice",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
@@ -91,7 +91,7 @@
             "explanation": "Sorry"
         },
         {
-            "id": 7,
+            "id": 2,
             "type": "narrative",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
@@ -104,7 +104,7 @@
             "explanation": "Sorry"
         },
         {
-            "id": 8,
+            "id": 3,
             "type": "multipleChoice",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
@@ -117,7 +117,7 @@
             "explanation": "Sorry"
         },
         {
-            "id": 9,
+            "id": 4,
             "type": "image",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
@@ -130,7 +130,7 @@
             "explanation": "Sorry"
         },
         {
-            "id": 10,
+            "id": 5,
             "type": "multipleChoice",
             "prompt": "?",
             "choices": [
