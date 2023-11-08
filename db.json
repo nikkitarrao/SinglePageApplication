@@ -33,8 +33,8 @@
                 "11",
                 "5"
             ],
-            "correctChoice": 0,
-            "explanation": "Sorry"
+            "correctChoice": 2,
+            "explanation": "Sorry you were wrong, the correct answer is 2. Learn math"
         },
         {
             "id": 3,
@@ -43,11 +43,11 @@
             "choices": [
                 "compare To method",
                 "constructor method",
-                "",
-                ""
+                "equals method",
+                "round method"
             ],
             "correctChoice": 1,
-            "explanation": "Sorry"
+            "explanation": "Sorry you were wrong, the correct answer is B. constructor method. Constructor methods are unique methods that have the same name as the class and no return type. The other methods listed are just built-in java methods."
         },
         {
             "id": 4,
@@ -59,8 +59,8 @@
                 "11",
                 "5"
             ],
-            "correctChoice": 0,
-            "explanation": "Sorry"
+            "correctChoice": 3,
+            "explanation": "Sorry you were wrong, the correct answer is"
         },
         {
             "id": 5,
@@ -72,23 +72,23 @@
                 "11",
                 "5"
             ],
-            "correctChoice": 3,
-            "explanation": "Sorry"
+            "correctChoice": 0,
+            "explanation": "Sorry you were wrong, the correct answer is"
         }
     ],
     "questionsQ2": [
         {
             "id": 1,
             "type": "multipleChoice",
-            "prompt": "What is the sum of 1 + 1?",
+            "prompt": "Which choice shows the correct syntax for defining a function named value with paramaters x and y using arrow syntax?",
             "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
+                "function value (x,y) => { }",
+                "function value = (x,y) => { }",
+                "let value = x,y => { }",
+                "let value = (x,y) => { }"
             ],
-            "correctChoice": 0,
-            "explanation": "Sorry"
+            "correctChoice": 4,
+            "explanation": "Sorry you were wrong, the correct answer is D. let value = (x,y) => { }. For arrow syntax you must invoke it using a variable. "
         },
         {
             "id": 2,
@@ -101,7 +101,7 @@
                 "5"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry"
+            "explanation": "Sorry you were wrong, the correct answer is"
         },
         {
             "id": 3,
@@ -114,7 +114,7 @@
                 "5"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry"
+            "explanation": "Sorry you were wrong, the correct answer is"
         },
         {
             "id": 4,
@@ -127,7 +127,7 @@
                 "5"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry"
+            "explanation": "Sorry you were wrong, the correct answer is"
         },
         {
             "id": 5,
@@ -140,7 +140,7 @@
                 "5"
             ],
             "correctChoice": 3,
-            "explanation": "Sorry"
+            "explanation": "Sorry you were wrong, the correct answer is"
         }
     ]
 }
