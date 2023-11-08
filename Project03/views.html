@@ -13,22 +13,28 @@
   <br>
 <div> <input id = "submit" type = "submit"> </div>  
 </form>
-  
 </script>
 
 <!-- quiz question type 1: multiple choice text buttons --> 
 <script id="quiz_view1" type = "text/x-handlebars-template">
+  <div> <p> Question {{id}} : {{prompt}} </p> </div>
+  <div> <ol>
+    <li> {{choices[0}} </li>
+    <li> {{choices[1}} </li>
+    <li> {{choices[2}} </li>
+    <li> {{choices[3}} </li>
+  </ol> </div>
   
 </script>
 
 <!-- quiz question type 2: narrative question with text response --> 
 <script id="quiz_view2" type = "text/x-handlebars-template">
-  
+  <div> <p> Question {{id}} : {{prompt}} </p> </div>
 </script>
 
 <!-- quiz question type 3: question with image selection --> 
 <script id="quiz_view3" type = "text/x-handlebars-template">
-  
+ <div> <p> Question {{id}} : {{prompt}} </p> </div>
 </script>
 
 <!-- final screen --> 
