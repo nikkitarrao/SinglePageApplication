@@ -20,9 +20,7 @@ document.querySelector('#form').onsubmit = () => {
    quizId  = "questionsQ2";
   }
   return false; 
-}
 
-  
 //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizid}/${qid}`
@@ -30,7 +28,6 @@ async function backEndRestAPI(quizId,qid){
   const data = await response.json()
   updateDom(data);
 }
-  
 
 //Rendering View
   var renderView = (model, view) => {
@@ -44,6 +41,10 @@ function updateDom(){
   html = renderView(model, '#quiz_view1');
   document.querySelector('#display-data').innerHTML = html;
 }
+
+} //ending the onsubmit event
+
+
 
 
 
