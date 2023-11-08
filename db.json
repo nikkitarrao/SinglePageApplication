@@ -52,28 +52,26 @@
         {
             "id": 4,
             "type": "image",
-            "prompt": "What is the sum of 1 + 1?",
+            "prompt": "Which image shows a recursive method that would have a StackOverFlowError?",
             "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
+                "wrong",
+                "right"
             ],
-            "correctChoice": 3,
-            "explanation": "Sorry you were wrong, the correct answer is"
+            "correctChoice": 1,
+            "explanation": "Sorry you were wrong, the correct answer is B. The second recursive call does not have a terminal condition, and so it will loop infinitely leading to a StackOverFlowError."
         },
         {
             "id": 5,
             "type": "multipleChoice",
-            "prompt": "?",
+            "prompt": "When dealing with file handling, what must you first import?",
             "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
+                "java.io.File",
+                "java.io.file",
+                "java.util.File",
+                "java.util.file"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry you were wrong, the correct answer is"
+            "explanation": "Sorry you were wrong, the correct answer is A.java.io.File. The File class is apart of the java.io package, and File must start with an uppercase as the language is case-sensitive. "
         }
     ],
     "questionsQ2": [
@@ -106,25 +104,23 @@
         {
             "id": 3,
             "type": "multipleChoice",
-            "prompt": "What is the sum of 1 + 1?",
+            "prompt": "What is the correct keyword for declaring a variable with a block scope?",
             "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
+                "var",
+                "const",
+                "let",
+                "int"
             ],
-            "correctChoice": 0,
-            "explanation": "Sorry you were wrong, the correct answer is"
+            "correctChoice": 2,
+            "explanation": "Sorry you were wrong, the correct answer is C. let.  In Javascript you can define a variable with both the keywords 'let' and 'var', but 'var' has a lexical scope while 'let' has a block scope."
         },
         {
             "id": 4,
-            "type": "image",
+            "type": "Which image shows the ",
             "prompt": "What is the sum of 1 + 1?",
             "choices": [
                 "2",
-                "-2",
-                "11",
-                "5"
+                "-2"
             ],
             "correctChoice": 0,
             "explanation": "Sorry you were wrong, the correct answer is"
@@ -132,15 +128,15 @@
         {
             "id": 5,
             "type": "multipleChoice",
-            "prompt": "?",
+            "prompt": "What is the correct syntax for a string literal?",
             "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
+                "'${text}'",
+                "`${text}`",
+                "/${text}/",
+                "${text}"
             ],
-            "correctChoice": 3,
-            "explanation": "Sorry you were wrong, the correct answer is"
+            "correctChoice": 1,
+            "explanation": "Sorry you were wrong, the correct answer is B. `${text}`."
         }
     ]
 }
