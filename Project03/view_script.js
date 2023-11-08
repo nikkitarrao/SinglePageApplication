@@ -34,7 +34,7 @@ document.querySelector('#form').onsubmit = () => {
 
   //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
-  let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizid}/${qid}`
+  let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
 }
