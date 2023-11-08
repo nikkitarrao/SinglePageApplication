@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-document.querySelector('#button').onload = () => {
+document.querySelector('#display-data').onload = () => {
   //Rendering Inital View
   view1 = renderView("#initialScreen")
   document.querySelector('#display-data').innerHTML = view1;
