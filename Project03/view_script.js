@@ -49,7 +49,7 @@ async function backEndRestAPI(quizId,qid){
       var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
       var html = template(data);
-      document.querySelector('#display-data').innerHTML = html;
+      return html;
     }
 }
 
