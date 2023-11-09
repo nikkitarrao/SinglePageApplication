@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   //Rendering Initial View
-  view1 = renderView('#initialScreen');
+  view1 = renderView({},'#initialScreen');
   document.querySelector('#display-data').innerHTML = view1;
   
   //Disabling the button unless there is something typed
