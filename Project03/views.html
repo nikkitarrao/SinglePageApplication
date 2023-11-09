@@ -24,6 +24,8 @@
     <li> {{choices[2]}} </li>
     <li> {{choices[3]}} </li>
   </ol> </div>
+  <br>
+  <div> <p> Correct Answer Counter: {{prompt}} </p> </div>
   
 </script>
 
@@ -34,11 +36,13 @@
     <li> {{choices[0]}} </li>
     <li> {{choices[1]}} </li>
   </ol> </div>
+  <div> <p> Correct Answer Counter: {{prompt}} </p> </div>
 </script>
 
 <!-- quiz question type 3: question with image selection --> 
 <script id="quiz_view3" type = "text/x-handlebars-template">
  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
+<div> <p> Correct Answer Counter: {{prompt}} </p> </div>
 </script>
 
 <!-- question correct --> 
