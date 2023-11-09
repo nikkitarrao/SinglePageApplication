@@ -46,6 +46,14 @@ document.querySelector('#form').onsubmit = () => {
   
 });
 
+     //Rendering View and Update DOM
+  var renderView = (model, view) => {
+      var source = document.querySelector(view).innerHTML
+      var template = Handlebars.compile(source);
+      var html = template(model);
+      return html;
+}
+
 } //ending the onsubmit event
   //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
@@ -57,10 +65,3 @@ async function backEndRestAPI(quizId,qid){
   
     }
 
-    //Rendering View and Update DOM
-  var renderView = (model, view) => {
-      var source = document.querySelector(view).innerHTML
-      var template = Handlebars.compile(source);
-      var html = template(model);
-      return html;
-}
