@@ -21,7 +21,7 @@
                 "ArrayList values = new ArrayList<int>;"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry you were wrong, the correct answer is A. ArrayList values = new ArrayList<Integer>(). ArrayLists cannot be composed of primitive data types, and since int is a primative type, you must use the wrapper class version of int, Integer. Also, ArrayList is a class, which is why is must include parenthases at the end."
+            "explanation": "ArrayLists cannot be composed of primitive data types, and since int is a primative type, you must use the wrapper class version of int, Integer. Also, ArrayList is a class, which is why is must include parenthases at the end."
         },
         {
             "id": 2,
@@ -34,7 +34,7 @@
                 "5"
             ],
             "correctChoice": 2,
-            "explanation": "Sorry you were wrong, the correct answer is 2. Learn math"
+            "explanation": "Learn math"
         },
         {
             "id": 3,
@@ -47,7 +47,7 @@
                 "round method"
             ],
             "correctChoice": 1,
-            "explanation": "Sorry you were wrong, the correct answer is B. constructor method. Constructor methods are unique methods that have the same name as the class and no return type. The other methods listed are just built-in java methods."
+            "explanation": "Constructor methods are unique methods that have the same name as the class and no return type. The other methods listed are just built-in java methods."
         },
         {
             "id": 4,
@@ -58,7 +58,7 @@
                 "right"
             ],
             "correctChoice": 1,
-            "explanation": "Sorry you were wrong, the correct answer is B. The second recursive call does not have a terminal condition, and so it will loop infinitely leading to a StackOverFlowError."
+            "explanation": "The second recursive call does not have a terminal condition, and so it will loop infinitely leading to a StackOverFlowError."
         },
         {
             "id": 5,
@@ -71,14 +71,14 @@
                 "java.util.file"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry you were wrong, the correct answer is A.java.io.File. The File class is apart of the java.io package, and File must start with an uppercase as the language is case-sensitive. "
+            "explanation": "The File class is apart of the java.io package, and File must start with an uppercase as the language is case-sensitive. "
         }
     ],
     "questionsQ2": [
         {
             "id": 1,
             "type": "multipleChoice",
-            "prompt": "Which choice shows the correct syntax for defining a function named value with paramaters x and y using arrow syntax?",
+            "prompt": "Which choice shows the correct syntax for defining a function named 'value' with paramaters x and y using arrow syntax?",
             "choices": [
                 "function value (x,y) => { }",
                 "function value = (x,y) => { }",
@@ -86,7 +86,7 @@
                 "let value = (x,y) => { }"
             ],
             "correctChoice": 4,
-            "explanation": "Sorry you were wrong, the correct answer is D. let value = (x,y) => { }. For arrow syntax you must invoke it using a variable. "
+            "explanation": "You must invoke arrow syntax using a variable. "
         },
         {
             "id": 2,
@@ -112,7 +112,7 @@
                 "int"
             ],
             "correctChoice": 2,
-            "explanation": "Sorry you were wrong, the correct answer is C. let.  In Javascript you can define a variable with both the keywords 'let' and 'var', but 'var' has a lexical scope while 'let' has a block scope."
+            "explanation": "In Javascript you can define a variable with both the keywords 'let' and 'var', but 'var' has a lexical scope while 'let' has a block scope."
         },
         {
             "id": 4,
@@ -136,7 +136,7 @@
                 "${text}"
             ],
             "correctChoice": 1,
-            "explanation": "Sorry you were wrong, the correct answer is B. `${text}`."
+            "explanation": "This is just the syntax for string literal."
         }
     ]
 }
