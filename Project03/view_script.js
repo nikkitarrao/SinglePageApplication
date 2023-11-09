@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 window.onload = () => {
   backEndRestAPI(1,1)
   //Rendering Inital View
-  //view1 = renderView('#initialScreen');
-  //document.querySelector('#display-data').innerHTML = view1;
+  view1 = renderView(1, '#initialScreen');
+  document.querySelector('#display-data').innerHTML = view1;
   //return false;
 }
   
