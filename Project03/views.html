@@ -17,28 +17,40 @@
 
 <!-- quiz question type 1: multiple choice text buttons --> 
 <script id="quiz_view1" type = "text/x-handlebars-template">
-  <div> <p> Question {{id}} : {{prompt}} </p> </div>
+  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
   <div> <ol>
-    <li> {{choices[0}} </li>
-    <li> {{choices[1}} </li>
-    <li> {{choices[2}} </li>
-    <li> {{choices[3}} </li>
+    <li> {{choices[0]}} </li>
+    <li> {{choices[1]}} </li>
+    <li> {{choices[2]}} </li>
+    <li> {{choices[3]}} </li>
   </ol> </div>
   
 </script>
 
 <!-- quiz question type 2: narrative question with text response --> 
 <script id="quiz_view2" type = "text/x-handlebars-template">
-  <div> <p> Question {{id}} : {{prompt}} </p> </div>
+  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
   <div> <ol>
-    <li> {{choices[0}} </li>
-    <li> {{choices[1}} </li>
+    <li> {{choices[0]}} </li>
+    <li> {{choices[1]}} </li>
   </ol> </div>
 </script>
 
 <!-- quiz question type 3: question with image selection --> 
 <script id="quiz_view3" type = "text/x-handlebars-template">
- <div> <p> Question {{id}} : {{prompt}} </p> </div>
+ <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
+</script>
+
+<!-- question correct --> 
+<script id="correct" type = "text/x-handlebars-template">
+ <div> <h2> GOOD WORK! </h2> </div>
+</script>
+
+<!-- question incorrect --> 
+<script id="incorrect" type = "text/x-handlebars-template">
+ <div> <h2> SORRY YOU ARE WRONG... </h2> </div>
+  <p> Correct Answer: {{correctChoice}} </p>
+  <p> Explanation: {{explanation}} </p>
 </script>
 
 <!-- final screen --> 
