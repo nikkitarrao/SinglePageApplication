@@ -21,10 +21,16 @@ document.querySelector('#form').onsubmit = () => {
   var name = document.querySelector('#name').value;
   //choosing the type of quiz
   if(document.querySelector('#quiz-selection').value === "1"){
-    quizId = "questionsQ1";
+     quizId = "questionsQ1";
+     qid = 1;
+     view2 = renderView('#quiz_view1');
+     document.querySelector('#display-data').innerHTML = view2;
   }
   else{
-   quizId  = "questionsQ2";
+     quizId  = "questionsQ2";
+     qid = 1;
+     view2 = renderView('#quiz_view1');
+     document.querySelector('#display-data').innerHTML = view2;
   }
   return false; 
 
