@@ -37,20 +37,20 @@ document.querySelector('#form').onsubmit = () => {
 
 
 } //ending the onsubmit event
-
   //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
+    }
 
-  //Rendering View and Update DOM
+    //Rendering View and Update DOM
   var renderView = (view) => {
       var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
       var html = template(data);
       return html;
-    }
+
 }
 
 
