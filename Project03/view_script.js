@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   //Rendering Initial View
-  view1 = renderView(1, '#initialScreen');
+  view1 = renderView('#initialScreen');
   document.querySelector('#display-data').innerHTML = view1;
   
   //Disabling the button unless there is something typed
@@ -45,10 +45,10 @@ async function backEndRestAPI(quizId,qid){
     }
 
   //Rendering View and Update DOM
-  var renderView = (model, view) => {
+  var renderView = (view) => {
       var source = document.querySelector(view).innerHTML
       var template = Handlebars.compile(source);
-      var html = template(model);
+      var html = template(data);
       return html;
 }
 
