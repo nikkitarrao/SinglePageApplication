@@ -35,7 +35,16 @@ document.querySelector('#form').onsubmit = () => {
   }
   return false; 
 
+//Updating DOM  
+//function updateDom(view){
+//  html = renderView(view);
+  
+//}
 
+
+
+  
+});
 
 } //ending the onsubmit event
   //Asynchronous Network Request
@@ -55,17 +64,3 @@ async function backEndRestAPI(quizId,qid){
       var html = template(model);
       return html;
 }
-
-
-
-  
-//Updating DOM  
-//function updateDom(view){
-//  html = renderView(view);
-  
-//}
-
-
-
-  
-});
