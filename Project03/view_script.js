@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = () => {
+  backEndRestAPI(1,1)
   //Rendering Inital View
-  view1 = renderView('#initialScreen');
-  document.querySelector('#display-data').innerHTML = view1;
+  //view1 = renderView('#initialScreen');
+  //document.querySelector('#display-data').innerHTML = view1;
   //return false;
 }
   
@@ -42,13 +43,16 @@ async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
+  const html_element = renderView(data, view)
+  document.querySelector('#display-data').innerHTML = html_element;
+  
     }
 
     //Rendering View and Update DOM
-  var renderView = (view) => {
-      var source = document.querySelector(view).innerHTML;
+  var renderView = (model, view) => {
+      var source = document.querySelector(view).innerHTML
       var template = Handlebars.compile(source);
-      var html = template(data);
+      var html = template(model);
       return html;
 }
 
