@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
- 
+
+  //Rendering Initial View
   view1 = renderView(1, '#initialScreen');
   document.querySelector('#display-data').innerHTML = view1;
- 
   
   //Disabling the button unless there is something typed
   document.querySelector('#submit').disabled = true;
@@ -30,13 +30,10 @@ document.querySelector('#form').onsubmit = () => {
      document.querySelector('#display-data').innerHTML = view2;
   }
   return false; 
-}
+}//ending the onsubmit event
 
  
-}); //end of DOMContentLoaded
-
-
-} //ending the onsubmit event
+}); //end of DOMContentLoaded 
 
 //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
