@@ -5,7 +5,7 @@ window.onload = () => {
   //Rendering Inital View
   view1 = renderView(1, '#initialScreen');
   document.querySelector('#display-data').innerHTML = view1;
-  //return false;
+  return false;
 }
   
   //Disabling the button unless there is something typed
