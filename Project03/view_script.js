@@ -50,7 +50,6 @@ async function backEndRestAPI(quizId,qid){
       var template = Handlebars.compile(source);
       var html = template(data);
       return html;
-
 }
 
 
