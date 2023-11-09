@@ -20,13 +20,13 @@ document.querySelector('#form').onsubmit = () => {
   if(document.querySelector('#quiz-selection').value === "1"){
      quizId = "questionsQ1";
      qid = 1;
-     view2 = renderView('#quiz_view1');
+     view2 = renderView(1, '#quiz_view1');
      document.querySelector('#display-data').innerHTML = view2;
   }
   else{
      quizId  = "questionsQ2";
      qid = 1;
-     view2 = renderView('#quiz_view1');
+     view2 = renderView(1, '#quiz_view1');
      document.querySelector('#display-data').innerHTML = view2;
   }
   return false; 
@@ -46,7 +46,7 @@ async function backEndRestAPI(quizId,qid){
 
   //Rendering View and Update DOM
   var renderView = (model, view) => {
-      var source = document.querySelector(view).innerHTML
+      var source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
       var html = template(model);
       return html;
