@@ -35,22 +35,23 @@ document.querySelector('#form').onsubmit = () => {
  
 }); //end of DOMContentLoaded
 
-     //Rendering View and Update DOM
-  var renderView = (model, view) => {
-      var source = document.querySelector(view).innerHTML
-      var template = Handlebars.compile(source);
-      var html = template(model);
-      return html;
-}
 
 } //ending the onsubmit event
-  //Asynchronous Network Request
+
+//Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
   const response = await fetch('https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/questions')
   const data = await response.json()
   const html_element = renderView(data, view)
   document.querySelector('#display-data').innerHTML = html_element;
-  
     }
+
+  //Rendering View and Update DOM
+  var renderView = (model, view) => {
+      var source = document.querySelector(view).innerHTML
+      var template = Handlebars.compile(source);
+      var html = template(model);
+      return html;
+}
 
