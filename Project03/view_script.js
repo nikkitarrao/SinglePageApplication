@@ -20,14 +20,20 @@ document.querySelector('#form').onsubmit = () => {
   if(document.querySelector('#quiz-selection').value === "1"){
      quizId = "questionsQ1";
      qid = 1;
+     backEndRestAPI(quizId,qid);
      view2 = renderView(1, '#quiz_view1');
      document.querySelector('#display-data').innerHTML = view2;
+    // document.querySelector('#buttonQ1').onsubmit = () => {
+   // }
   }
   else{
      quizId  = "questionsQ2";
      qid = 1;
+     backEndRestAPI(quizId,qid);
      view2 = renderView(1, '#quiz_view1');
      document.querySelector('#display-data').innerHTML = view2;
+     //document.querySelector('#buttonQ1').onsubmit = () => {
+    // }
   }
   return false; 
 }//ending the onsubmit event
