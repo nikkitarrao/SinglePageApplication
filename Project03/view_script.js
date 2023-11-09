@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = () => {
   //Rendering Inital View
-  view1 = renderView("#initialScreen")
+  view1 = renderView('#initialScreen');
   document.querySelector('#display-data').innerHTML = view1;
   //return false;
 }
