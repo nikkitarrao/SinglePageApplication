@@ -48,8 +48,8 @@
             "type": "image",
             "prompt": "Which image shows a recursive method that would have a StackOverFlowError?",
             "choices": [
-                "rightAnswerQuiz1.png",
-                "right"
+                "wrongAnswerQuiz1.png",
+                "rightAnswerQuiz1.png"
             ],
             "correctChoice": 1,
             "explanation": "The second recursive call does not have a terminal condition, and so it will loop infinitely leading to a StackOverFlowError."
