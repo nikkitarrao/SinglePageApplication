@@ -26,15 +26,9 @@
         {
             "id": 2,
             "type": "narrative",
-            "prompt": "What is the sum of 1 + 1?",
-            "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
-            ],
-            "correctChoice": 2,
-            "explanation": "Learn math"
+            "prompt": "What is the name for the elements that make-up a linked list?",
+            "correctAnswer": "node",
+            "explanation": "A linked list consists of nodes, where each node contains a data field and a reference link to the next node in the list."
         },
         {
             "id": 3,
@@ -91,14 +85,8 @@
         {
             "id": 2,
             "type": "narrative",
-            "prompt": "What is the sum of 1 + 1?",
-            "choices": [
-                "2",
-                "-2",
-                "11",
-                "5"
-            ],
-            "correctChoice": 0,
+            "prompt": "?",
+            "correctAnswer": 0,
             "explanation": "Sorry you were wrong, the correct answer is"
         },
         {
