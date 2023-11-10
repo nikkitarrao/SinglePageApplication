@@ -48,7 +48,7 @@
             "type": "image",
             "prompt": "Which image shows a recursive method that would have a StackOverFlowError?",
             "choices": [
-                "wrong",
+                "rightAnswerQuiz1.png",
                 "right"
             ],
             "correctChoice": 1,
