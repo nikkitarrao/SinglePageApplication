@@ -18,12 +18,15 @@
 <!-- quiz question type 1: multiple choice text buttons --> 
 <script id="quiz_view1" type = "text/x-handlebars-template">
   <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
+  <form>
   <div> <ol>
     <li> {{choices[0]}} </li>
     <li> {{choices[1]}} </li>
     <li> {{choices[2]}} </li>
     <li> {{choices[3]}} </li>
   </ol> </div>
+  <div> <input id = "next" type = "submit"> </div> 
+  </form>
   <br>
   <div> <p> Correct Answer Counter: {{prompt}} </p> </div>
   
@@ -32,20 +35,25 @@
 <!-- quiz question type 2: narrative question with text response --> 
 <script id="quiz_view2" type = "text/x-handlebars-template">
   <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
-  <div> <ol>
-    <li> {{choices[0]}} </li>
-    <li> {{choices[1]}} </li>
-  </ol> </div>
+  <form>
+  <div> <p> Answer: <input id = "name" autocomplete = "off" autofocus placeholder = "type your answer" type = "text"> </p> </div>
+  <div> <input id = "next" type = "submit"> </div> 
+  </form>
+  <br>
   <div> <p> Correct Answer Counter: {{prompt}} </p> </div>
 </script>
 
 <!-- quiz question type 3: question with image selection --> 
 <script id="quiz_view3" type = "text/x-handlebars-template">
  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
+    <form>
     <div> <ol>
     <li> <img src = {{}}> </li>
     <li> <img src = {{}}>  </li>
   </ol> </div>
+  <div> <input id = "next" type = "submit"> </div> 
+  </form>
+  <br>
 <div> <p> Correct Answer Counter: {{prompt}} </p> </div>
 </script>
 
