@@ -47,8 +47,14 @@
  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
     <form>
     <div> <ul>
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-lg-offset-2 gauche">
     <li> A. <img src = {{choices[0]}}> </li>
+    </div>
+    <div class="col-lg-3 col-lg-offset-2 gauche">
     <li> B. <img src = {{choices[1]}}>  </li>
+    </div> </div> </div>
   </ul> </div>
   <div> <input id = "next" type = "submit"> </div> 
   </form>
