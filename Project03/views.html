@@ -76,7 +76,16 @@
 
 <!-- final screen --> 
 <script id="finalScreen" type = "text/x-handlebars-template">
-  if(totalCorrectAnswers >= 
+  if(totalCorrectAnswers/5 >= 0.8){
+  <h3> Congratulations {{name}}, you passed the quiz!</h3>
+  <div> <button id = "re-take"> Re-take the same quiz </button> </div>
+  <div> <button id = "return"> Return to homepage </button> </div>
+  }
+  else{
+  <h3> Sorry, {{name}}, you failed the quiz!</h3>
+  <div> <button id = "re-take"> Re-take the same quiz </button> </div>
+  <div> <button id = "return"> Return to homepage </button> </div>
+  }
 </script>
 
   
