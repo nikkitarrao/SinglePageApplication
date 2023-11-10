@@ -2,11 +2,11 @@
     "quizDetails": [
         {
             "id": 1,
-            "title": "JavaQuiz"
+            "title": "Java Quiz"
         },
         {
-            "id": 1,
-            "title": "JavascriptQuiz"
+            "id": 2,
+            "title": "Javascript Quiz"
         }
     ],
     "questionsQ1": [
@@ -65,7 +65,7 @@
                 "java.util.file"
             ],
             "correctChoice": 0,
-            "explanation": "The File class is apart of the java.io package, and File must start with an uppercase as the language is case-sensitive. "
+            "explanation": "The File class is apart of the java.io package, and File must start with an uppercase 'F' as the language is case-sensitive. "
         }
     ],
     "questionsQ2": [
@@ -80,14 +80,14 @@
                 "let value = (x,y) => { }"
             ],
             "correctChoice": 4,
-            "explanation": "You must invoke arrow syntax using a variable. "
+            "explanation": "You must invoke arrow syntax using a variable, so in this case, we declare a variable named 'value' using the 'let' keyword. Also, the parameters x and y must be in parenthases. "
         },
         {
             "id": 2,
             "type": "narrative",
-            "prompt": "?",
-            "correctAnswer": 0,
-            "explanation": "Sorry you were wrong, the correct answer is"
+            "prompt": "Which symbols determines if two values are of the same data-type as well as value in Javascript?",
+            "correctAnswer": "===",
+            "explanation": "Javascript has two different opperators that are able to deetermine whether values are equal. The non-strict equals operator only compares value (regardless of data-type), and is denoted with the symbol '=='. The strict equals operator, on the other hand, which determines if two values are of both the same data-type as well as value is denoted by '==='. "
         },
         {
             "id": 3,
@@ -104,14 +104,14 @@
         },
         {
             "id": 4,
-            "type": "Which image shows the ",
-            "prompt": "What is the sum of 1 + 1?",
+            "type": "image",
+            "prompt": "Which image shows the correct syntax of a JSON Object?",
             "choices": [
-                "2",
-                "-2"
+                "rightAnswerQuiz2.png",
+                "wrongAnswerQuiz2.png"
             ],
             "correctChoice": 0,
-            "explanation": "Sorry you were wrong, the correct answer is"
+            "explanation": "JSON objects allow objects to be represented in text format. The syntax is denoted by key-value pairs with a colon separating the key from the value, and a comma separating the key-value pairs from one another."
         },
         {
             "id": 5,
