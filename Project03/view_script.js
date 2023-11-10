@@ -52,8 +52,8 @@ async function backEndRestAPI(quizId,qid){
 
   //Rendering View and Update DOM
   var renderView = (model, view) => {
-      var sourceElement = document.querySelector(view);
-      var source = sourceElement.innerHTML;
+      var source = document.querySelector(view);
+      //var source = sourceElement.innerHTML;
       var template = Handlebars.compile(source);
       var html = template(model);
       return html;
