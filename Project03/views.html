@@ -19,12 +19,12 @@
 <script id="quiz_view1" type = "text/x-handlebars-template">
   <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
   <form>
-  <div> <ol>
-    <li> {{choices[0]}} </li>
-    <li> {{choices[1]}} </li>
-    <li> {{choices[2]}} </li>
-    <li> {{choices[3]}} </li>
-  </ol> </div>
+  <div> <ul>
+    <li> A. {{choices[0]}} </li>
+    <li> B. {{choices[1]}} </li>
+    <li> C. {{choices[2]}} </li>
+    <li> D. {{choices[3]}} </li>
+  </ul> </div>
   <div> <input id = "next" type = "submit"> </div> 
   </form>
   <br>
@@ -47,10 +47,10 @@
 <script id="quiz_view3" type = "text/x-handlebars-template">
  <div> <h3> Question {{id}} : {{prompt}} </h3> </div>
     <form>
-    <div> <ol>
-    <li> <img src = {{choices[0]}}> </li>
-    <li> <img src = {{choices[1]}}>  </li>
-  </ol> </div>
+    <div> <ul>
+    <li> A. <img src = {{choices[0]}}> </li>
+    <li> B. <img src = {{choices[1]}}>  </li>
+  </ul> </div>
   <div> <input id = "next" type = "submit"> </div> 
   </form>
   <br>
