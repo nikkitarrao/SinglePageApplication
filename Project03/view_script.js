@@ -24,6 +24,10 @@ document.querySelector('#form').onsubmit = () => {
      view2 = renderView(1, '#quiz_view1');
      document.querySelector('#display-data').innerHTML = view2;
     // document.querySelector('#buttonQ1').onsubmit = () => {
+    //
+    //for(i = 0; i <5; i++) {
+    //
+    //}
    // }
   }
   else{
@@ -41,6 +45,14 @@ document.querySelector('#form').onsubmit = () => {
  
 }); //end of DOMContentLoaded 
 
+  //Rendering View and Update DOM
+  var renderView = (model, view) => {
+      var source = document.querySelector(view).innerHTML;
+      var template = Handlebars.compile(source);
+      var html = template(model);
+      return html;
+}
+
 //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
@@ -49,12 +61,4 @@ async function backEndRestAPI(quizId,qid){
   const html_element = renderView(data, view)
   document.querySelector('#display-data').innerHTML = html_element;
     }
-
-  //Rendering View and Update DOM
-  var renderView = (model, view) => {
-      var source = document.querySelector(view).innerHTML;
-      var template = Handlebars.compile(source);
-      var html = template(model);
-      return html;
-}
 
