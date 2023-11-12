@@ -51,7 +51,7 @@ document.querySelector('#form').onsubmit = () => {
       var template = Handlebars.compile(source);
       var html = template(model);
       return html;
-}
+};
 
 //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid){
