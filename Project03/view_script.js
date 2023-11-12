@@ -1,3 +1,5 @@
+var view = "0";
+
 document.addEventListener('DOMContentLoaded', function() {
 
   //Rendering Initial View
