@@ -23,12 +23,6 @@ document.querySelector('#form').onsubmit = () => {
      backEndRestAPI(quizId,qid);
      view2 = renderView(1, '#quiz_view1');
      document.querySelector('#display-data').innerHTML = view2;
-    // document.querySelector('#buttonQ1').onsubmit = () => {
-    //
-    //for(i = 0; i <5; i++) {
-    //
-    //}
-   // }
   }
   else{
      quizId  = "questionsQ2";
