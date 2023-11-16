@@ -42,10 +42,10 @@ document.querySelector('#form').onsubmit = () => {
 }); //end of DOMContentLoaded 
 
   //Rendering View and Update DOM
-  function renderView(model, view){
+  function renderView(data, view){
       source = document.querySelector(view).innerHTML;
       var template = Handlebars.compile(source);
-      var html = template(model);
+      var html = template(data);
       return html;
 };
 
