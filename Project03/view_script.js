@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
  // view1 = renderView({},'#initialScreen');
 //  document.querySelector('#display-data').innerHTML = view1;
-  backEndRestAPI("questionsQ2", 1); //"#initialScreen"
+  backEndRestAPI("questionsQ2", 1, "#initialScreen");
   
   //Disabling the button unless there is something typed
   document.querySelector('#submit').disabled = true;
@@ -49,11 +49,11 @@ document.querySelector('#form').onsubmit = () => {
 };
 
 //Asynchronous Network Request
-async function backEndRestAPI(quizId,qid){
+async function backEndRestAPI(quizId,qid, view){
   let api_endpoint = `https://my-json-server.typicode.com/nikkitarrao/SinglePageApplication/${quizId}/${qid}`
   const response = await fetch(api_endpoint)
   const data = await response.json()
-  const html_element = renderView(data, "#initialScreen")
+  const html_element = renderView(data, view)
   document.querySelector('#display-data').innerHTML = html_element;
     }
 
