@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
  // view1 = renderView({},'#initialScreen');
 //  document.querySelector('#display-data').innerHTML = view1;
-  backEndRestAPI("questionsQ1", 1, "#initialScreen");
+  backEndRestAPI("questionsQ2", 1, "#initialScreen");
   
   //Disabling the button unless there is something typed
   document.querySelector('#submit').disabled = true;
