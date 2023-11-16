@@ -20,7 +20,7 @@
                 "ArrayList values = new ArrayList<Integer>;",
                 "ArrayList values = new ArrayList<int>;"
             ],
-            "correctChoice": 0,
+            "correctChoice": "A",
             "explanation": "ArrayLists cannot be composed of primitive data types, and since int is a primative type, you must use the wrapper class version of int, Integer. Also, ArrayList is a class, which is why is must include parenthases at the end."
         },
         {
@@ -40,7 +40,7 @@
                 "equals method",
                 "round method"
             ],
-            "correctChoice": 1,
+            "correctChoice": "B",
             "explanation": "Constructor methods are unique methods that have the same name as the class and no return type. The other methods listed are just built-in java methods."
         },
         {
@@ -51,7 +51,7 @@
                 "wrongAnswerQuiz1.png",
                 "rightAnswerQuiz1.png"
             ],
-            "correctChoice": 1,
+            "correctChoice": "B",
             "explanation": "The second recursive call does not have a terminal condition, and so it will loop infinitely leading to a StackOverFlowError."
         },
         {
@@ -64,7 +64,7 @@
                 "java.util.File",
                 "java.util.file"
             ],
-            "correctChoice": 0,
+            "correctChoice": "A",
             "explanation": "The File class is apart of the java.io package, and File must start with an uppercase 'F' as the language is case-sensitive. "
         }
     ],
@@ -79,7 +79,7 @@
                 "let value = x,y => { }",
                 "let value = (x,y) => { }"
             ],
-            "correctChoice": 4,
+            "correctChoice": "D",
             "explanation": "You must invoke arrow syntax using a variable, so in this case, we declare a variable named 'value' using the 'let' keyword. Also, the parameters x and y must be in parenthases. "
         },
         {
@@ -99,7 +99,7 @@
                 "let",
                 "int"
             ],
-            "correctChoice": 2,
+            "correctChoice": "C",
             "explanation": "In Javascript you can define a variable with both the keywords 'let' and 'var', but 'var' has a lexical scope while 'let' has a block scope."
         },
         {
@@ -110,7 +110,7 @@
                 "rightAnswerQuiz2.png",
                 "wrongAnswerQuiz2.png"
             ],
-            "correctChoice": 0,
+            "correctChoice": "A",
             "explanation": "JSON objects allow objects to be represented in text format. The syntax is denoted by key-value pairs with a colon separating the key from the value, and a comma separating the key-value pairs from one another."
         },
         {
@@ -123,7 +123,7 @@
                 "/${text}/",
                 "${text}"
             ],
-            "correctChoice": 1,
+            "correctChoice": "B",
             "explanation": "This is just the syntax for string literal."
         }
     ]
