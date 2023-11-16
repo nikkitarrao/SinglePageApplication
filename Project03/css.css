@@ -2,6 +2,8 @@ body{background-color: #FFF9DD; color: #41FF00; }
 .jumbotron{background-color: black;}
 input{background-color: black; border-color: white; color: #41FF00; boder-style: solid;}
 option{background-color: black; color: #41FF00; border-color: white;}
+#correct{color: #41FF00; size: 50 px;}
+#incorrect{color: red; size: 50px;}
 
 
   
