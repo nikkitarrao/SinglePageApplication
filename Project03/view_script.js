@@ -3,8 +3,8 @@ var view = "0";
 document.addEventListener('DOMContentLoaded', function() {
 
   //Rendering Initial View
-  view1 = renderView({},'#initialScreen');
-  document.querySelector('#display-data').innerHTML = view1;
+  //view1 = renderView({},'#initialScreen');
+  //document.querySelector('#display-data').innerHTML = view1;
   
   //Disabling the button unless there is something typed
   document.querySelector('#submit').disabled = true;
