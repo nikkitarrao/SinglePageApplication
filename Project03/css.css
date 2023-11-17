@@ -4,7 +4,7 @@ input{background-color: black; border-color: white; color: #41FF00; boder-style:
 option{background-color: black; color: #41FF00; border-color: white;}
 #correct{color: #41FF00; size: 50 px;}
 #incorrect{color: red; size: 50px;}
-image{size: 20%;}
+image{width: 20%;}
 
 
   
