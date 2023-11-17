@@ -76,23 +76,32 @@ else if(qid > 5 && totalCorrectAnswers/5 < 0.8){
   //document.querySelector('#name').innerHTML = name;
 }
 
+//return button
+//retake button
+
+//document.querySelecter('#question').onchange = () => {
 //correct screen
 //if(e.target.value == document.querySelector('#question').value){
+  //console.log(e.target.value);
    //const currentView = view;
     //backEndRestAPI(quizId, qid, "#correct");
      //setting the correct screen to show for only 1 second
     //setTimeout(() => {
    // backEndRestAPI(quizId, qid , currentView);
-  //}, 1000); // 1000 milliseconds = 1 second
+ // }, 1000); // 1000 milliseconds = 1 second
   
   // console.log(document.querySelector('#question').value);
-   // console.log(e.target.value);
+  // console.log(e.target.value);
  // }
  //incorrect screen
-//else{
- // backEndRestAPI(quizId, qid, "#incorrect");
+//else if(e.target.value != document.querySelector('#question').value){
+  //backEndRestAPI(quizId, qid, "#incorrect");
 //}
+//if(e.target.dataset.viewaction == "continue"){
 
+//}
+//return false;
+//}
 
 
 
