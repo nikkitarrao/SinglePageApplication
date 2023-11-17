@@ -1,3 +1,7 @@
+//need to fix counter
+//need to fix return and retake buttons
+//need to fix good work screen and explain you are wrong screen
+//show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
   backEndRestAPI("questionsQ1", 1, "#initialScreen");
@@ -6,13 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
 //event delegation for views
  document.querySelector('#display-data').onclick = (e)=>{
     handleViewEvents(e);
-    //correctAnswerCounter(e);
     return false;
     }
 
  //event delegation for correct answer counter
  //document.querySelector('#display-data').onsubmit = (e)=>{
-  //correctAnswerCounter(e);
+  //quizCounter(e);
  // return false;
 //}
 
@@ -65,17 +68,25 @@ qid = qid + 1;
 //passed the test screen
 else if(qid > 5 || totalCorrectAnswers/5 >= 0.8){
   backEndRestAPI(quizId, qid, "#finalScreenPassed");
+  //document.querySelector('#name').innerHTML = name;
 }
 //failed the test screen
 else if(qid > 5 && totalCorrectAnswers/5 < 0.8){
   backEndRestAPI(quizId, qid, "#finalScreenFailed");
+  //document.querySelector('#name').innerHTML = name;
 }
 
 //correct screen
-//if(document.querySelector('#multipleChoice').value == document.querySelector('#choicesMultipleChoice').value){
-   // backEndRestAPI(quizId, qid, "#correct");
-  //  console.log(document.querySelector('#choicesMultipleChoice').value);
-   // console.log(document.querySelector('#multipleChoice').value);
+//if(e.target.value == document.querySelector('#question').value){
+   //const currentView = view;
+    //backEndRestAPI(quizId, qid, "#correct");
+     //setting the correct screen to show for only 1 second
+    //setTimeout(() => {
+   // backEndRestAPI(quizId, qid , currentView);
+  //}, 1000); // 1000 milliseconds = 1 second
+  
+  // console.log(document.querySelector('#question').value);
+   // console.log(e.target.value);
  // }
  //incorrect screen
 //else{
@@ -103,6 +114,8 @@ async function backEndRestAPI(quizId,qid, view){
   document.querySelector('#display-data').innerHTML = html_element;
     }
 
+ 
+
   //Rendering View and Update DOM
   const renderView = (data, view) => {
       source = document.querySelector(view).innerHTML;
@@ -111,14 +124,17 @@ async function backEndRestAPI(quizId,qid, view){
       return html;
 }
 
-//come back to this
-const quizCounter = (e) => {
+
+//counter function
+//const quizCounter = (e) => {
+ // element = e.target;
+ // console.log(e.target);
   //defining initial counter???
-  let counter = 0;
-  if(e.target === correctChoice){
-  counter += 1;
-   var totalCorrectAnswers = counter;
-   return totalCorrectAnswers;
-   //return false;
-  }
-}
+ // let counter = 0;
+ // if(element.value === document.querySelector('#question').value){
+ // counter++;
+  //document.querySelector('#counter').innerHTML = counter;
+ // }
+//return false;
+//}
+
