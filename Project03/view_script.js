@@ -66,12 +66,12 @@ backEndRestAPI(quizId, qid, "#quiz_view1");
 qid = qid + 1;
 }
 //passed the test screen
-else if(qid > 5 || totalCorrectAnswers/5 >= 0.8){
+else if(qid > 5 || counter/5 >= 0.8){
   backEndRestAPI(quizId, qid, "#finalScreenPassed");
   //document.querySelector('#name').innerHTML = name;
 }
 //failed the test screen
-else if(qid > 5 && totalCorrectAnswers/5 < 0.8){
+else if(qid > 5 && counter/5 < 0.8){
   backEndRestAPI(quizId, qid, "#finalScreenFailed");
   //document.querySelector('#name').innerHTML = name;
 }
