@@ -27,7 +27,7 @@
             "id": 2,
             "type": "narrative",
             "prompt": "What is the name for the elements that make-up a linked list?",
-            "correctAnswer": "node",
+            "correctChoice": "node",
             "explanation": "A linked list consists of nodes, where each node contains a data field and a reference link to the next node in the list."
         },
         {
@@ -86,7 +86,7 @@
             "id": 2,
             "type": "narrative",
             "prompt": "Which symbols determines if two values are of the same data-type as well as value in Javascript?",
-            "correctAnswer": "===",
+            "correctChoice": "===",
             "explanation": "Javascript has two different opperators that are able to deetermine whether values are equal. The non-strict equals operator only compares value (regardless of data-type), and is denoted with the symbol '=='. The strict equals operator, on the other hand, which determines if two values are of both the same data-type as well as value is denoted by '==='. "
         },
         {
