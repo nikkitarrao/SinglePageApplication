@@ -105,17 +105,12 @@
  <div id = "image" value = "{{correctChoice}}"> <h3> Question {{id}} : {{prompt}} </h3> </div>
     <form>
     <div> 
-    <div class="container">
-    <div class="row">
-    <div class="col-lg-3 col-lg-offset-2 gauche">
       <input type = "radio" id = "A" name = "choicesImage" class = "A">
           <label for="A"> A. <img src = "{{choices.[0]}}"> </label> 
-    </div>
-    <div class="col-lg-3 col-lg-offset-2 gauche">
+    <br>
       <input type = "radio" id = "B" name = "choicesImage" class = "B">
           <label for="B"> B. <img src = "{{choices.[1]}}"> </label> 
-    </div> 
-  </select> </div> </div>
+  </select> 
    </div>
   <div> <input id = "next" type = "submit" data-viewAction="nextQuestion" data-currentquestionid="{{id}}"> </div> 
   </form>
