@@ -24,6 +24,9 @@ return false;
 
 
 handleViewEvents =  (e) => {
+  if (e.target.type !== 'radio') {
+    e.preventDefault();
+  }
   if (e.target.dataset.viewaction == "startQuiz") {
   //saving user entered name
   var name = document.querySelector('#name').value;
@@ -45,20 +48,22 @@ handleViewEvents =  (e) => {
 //each question quiz 1
 console.log(qid);
 console.log(quizId);
-if(e.target.dataset.viewaction == "nextQuestion" && e.target.dataset.currentquestionid == 1){
+if((e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 1)){ //|| e.target.dataset.viewaction == "nextQuestion" 
   qid = qid + 1;
   backEndRestAPI(quizId, qid, "#quiz_view2");
+  console.log(qid);
 }
-else if(e.target.dataset.viewaction == "nextQuestionnarrative" && e.target.dataset.currentquestionid == 2){
+else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 2){
 qid = qid + 1;
 backEndRestAPI(quizId, qid, "#quiz_view1");
+console.log(qid);
 }
-else if(e.target.dataset.viewaction == "nextQuestion" && e.target.dataset.currentquestionid == 3){
+else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 3){
   qid = qid + 1;
   backEndRestAPI(quizId, qid, "#quiz_view3");
   console.log(qid);
   }
-else if(e.target.dataset.viewaction == "nextQuestion" && e.target.dataset.currentquestionid == 4){
+else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 4){
 console.log(qid);
 qid = qid + 1;
 console.log(qid);
@@ -66,44 +71,44 @@ backEndRestAPI(quizId, qid, "#quiz_view1");
 qid = qid + 1;
 }
 //passed the test screen
-else if(qid > 5 || counter/5 >= 0.8){
-  backEndRestAPI(quizId, qid, "#finalScreenPassed");
+//else if(qid > 5 || counter/5 >= 0.8){
+  //backEndRestAPI(quizId, qid, "#finalScreenPassed");
   //document.querySelector('#name').innerHTML = name;
-}
+//}
 //failed the test screen
-else if(qid > 5 && counter/5 < 0.8){
-  backEndRestAPI(quizId, qid, "#finalScreenFailed");
+//else if(qid > 5 && counter/5 < 0.8){
+ //backEndRestAPI(quizId, qid, "#finalScreenFailed");
   //document.querySelector('#name').innerHTML = name;
-}
-
+//}
 //return button
 //retake button
 
-//document.querySelecter('#question').onchange = () => {
+//if (e.target.type == 'radio') {
+  if (e.target.dataset.viewaction == "nextQuestion") {
+  console.log(document.querySelector('#form').value);
+  console.log(e.target.value);
 //correct screen
-//if(e.target.value == document.querySelector('#question').value){
-  //console.log(e.target.value);
-   //const currentView = view;
-    //backEndRestAPI(quizId, qid, "#correct");
+if(e.target.value == document.querySelector('#form').value){
+  console.log(e.target.value);
+   const currentView = view;
+    backEndRestAPI(quizId, qid, "#form");
      //setting the correct screen to show for only 1 second
-    //setTimeout(() => {
-   // backEndRestAPI(quizId, qid , currentView);
- // }, 1000); // 1000 milliseconds = 1 second
-  
-  // console.log(document.querySelector('#question').value);
-  // console.log(e.target.value);
- // }
+    setTimeout(() => {
+    backEndRestAPI(quizId, qid , currentView);
+  }, 1000); // 1000 milliseconds = 1 second
+  }
  //incorrect screen
-//else if(e.target.value != document.querySelector('#question').value){
-  //backEndRestAPI(quizId, qid, "#incorrect");
-//}
-//if(e.target.dataset.viewaction == "continue"){
+else if(e.target.value !== document.querySelector('#form').value){
+  backEndRestAPI(quizId, qid, "#incorrect");
+}
+return false;
+}
 
+//continue button on wrong screen
+//if(e.target.dataset.viewaction == ""){
+//console.log(qid);
+//console.log(quizId);
 //}
-//return false;
-//}
-
-
 
 
 
@@ -145,5 +150,8 @@ async function backEndRestAPI(quizId,qid, view){
   //document.querySelector('#counter').innerHTML = counter;
  // }
 //return false;
+//}
+
+
 //}
 
