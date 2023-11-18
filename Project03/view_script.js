@@ -68,7 +68,7 @@ console.log(qid);
 qid = qid + 1;
 console.log(qid);
 backEndRestAPI(quizId, qid, "#quiz_view1");
-qid = qid + 1;
+//qid = qid + 1;
 }
 //passed the test screen
 //else if(qid > 5 || counter/5 >= 0.8){
