@@ -51,7 +51,7 @@
                 "wrongAnswerQuiz1.png",
                 "rightAnswerQuiz1.png"
             ],
-            "correctChoice": "B",
+            "correctChoice": "A",
             "explanation": "The second recursive call does not have a terminal condition, and so it will loop infinitely leading to a StackOverFlowError."
         },
         {
