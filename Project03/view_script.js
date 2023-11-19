@@ -1,6 +1,7 @@
 //need to fix retake buttons
-//need to fix good work screen and explain you are wrong screen
+//need to fix good work screen
 //show the name on the end screens
+//need to be able to pick answers w radio button
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
   backEndRestAPI("questionsQ1", 1, "#initialScreen");
@@ -73,16 +74,16 @@ backEndRestAPI(quizId, qid, "#quiz_view1");
 //document.querySelector('#counter').innerHTML = counter;
 }
 //passed the test screen
-else if(e.target.dataset.viewaction == "continue" && qid > 5 || counter/5 >= 0.8){
+else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 >= 0.8){
   backEndRestAPI(quizId, qid, "#finalScreenPassed");
   document.querySelector('#name').innerHTML = name;
 }
 
 //failed the test screen
-//else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 < 0.8){
- //backEndRestAPI(quizId, qid, "#finalScreenFailed");
-  //document.querySelector('#name').innerHTML = name;
-//}
+else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 < 0.8){
+ backEndRestAPI(quizId, qid, "#finalScreenFailed");
+  document.querySelector('#name').innerHTML = name;
+}
 
 //return button
 if (e.target.dataset.viewaction == "return") {
