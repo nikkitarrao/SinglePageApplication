@@ -1,4 +1,3 @@
-//need to fix counter
 //need to fix return and retake buttons
 //need to fix good work screen and explain you are wrong screen
 //show the name on the end screens
@@ -13,15 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     return false;
     }
 
- //event delegation for correct answer counter
- //document.querySelector('#display-data').onsubmit = (e)=>{
-  //quizCounter(e);
- // return false;
-//}
 
 return false;
 }); //end of DOMContentLoaded 
 
+
+
+let counter = 0;
 
 handleViewEvents =  (e) => {
   if (e.target.type !== 'radio') {
@@ -51,25 +48,31 @@ console.log(quizId);
 if((e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 1)){ //|| e.target.dataset.viewaction == "nextQuestion" 
   backEndRestAPI(quizId, qid, "#quiz_view2");
   console.log(qid);
+  console.log(counter);
+  //document.querySelector('#counter').innerHTML = counter;
 }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 2){
 backEndRestAPI(quizId, qid, "#quiz_view1");
 console.log(qid);
+//document.querySelector('#counter').innerHTML = counter;
 }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 3){
   backEndRestAPI(quizId, qid, "#quiz_view3");
   console.log(qid);
+  //document.querySelector('#counter').innerHTML = counter;
   }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 4){
 console.log(qid);
 console.log(qid);
 backEndRestAPI(quizId, qid, "#quiz_view1");
+//document.querySelector('#counter').innerHTML = counter;
 }
 //passed the test screen
-//else if(e.target.dataset.viewaction == "continue" && qid > 5 || counter/5 >= 0.8){
-  //backEndRestAPI(quizId, qid, "#finalScreenPassed");
-  //document.querySelector('#name').innerHTML = name;
-//}
+else if(e.target.dataset.viewaction == "continue" && qid > 5 || counter/5 >= 0.8){
+  backEndRestAPI(quizId, qid, "#finalScreenPassed");
+  document.querySelector('#name').innerHTML = name;
+}
+
 //failed the test screen
 //else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 < 0.8){
  //backEndRestAPI(quizId, qid, "#finalScreenFailed");
@@ -102,17 +105,17 @@ if(e.target.value == document.querySelector('#form').value){
     setTimeout(() => {
     backEndRestAPI(quizId, qid , currentView);
   }, 1000); // 1000 milliseconds = 1 second
+  counter++;
+  document.querySelector('#counter').innerHTML = counter;
   }
  //incorrect screen
 else if(e.target.value !== document.querySelector('#form').value){
   backEndRestAPI(quizId, qid, "#incorrect");
   qid = qid + 1;
+  document.querySelector('#counter').innerHTML = counter;
 }
 return false;
 }
-
-
-
 
 return false;
 } //end of handleViewsEvent
@@ -140,15 +143,5 @@ async function backEndRestAPI(quizId,qid, view){
 }
 
 
-//counter function
-//const quizCounter = (e) => {
- // element = e.target;
- // console.log(e.target);
-  //defining initial counter???
- // let counter = 0;
- // if(element.value === document.querySelector('#question').value){
- // counter++;
-  //document.querySelector('#counter').innerHTML = counter;
- // }
-//return false;
-//}
+
+
