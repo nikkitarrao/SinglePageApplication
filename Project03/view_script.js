@@ -1,3 +1,4 @@
+//if you get every question wrong it basically works
 //need to fix retake buttons
 //need to fix good work screen, it never disappears, and only accepts the right answer for multiple choice
 //show the name on the end screens
