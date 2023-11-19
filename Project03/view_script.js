@@ -1,4 +1,4 @@
-//need to fix return and retake buttons
+//need to fix retake buttons
 //need to fix good work screen and explain you are wrong screen
 //show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     return false;
     }
 
+ //event delegation for correct answer counter
+ //document.querySelector('#display-data').onsubmit = (e)=>{
+  //quizCounter(e);
+ // return false;
+//}
 
 return false;
 }); //end of DOMContentLoaded 
@@ -29,7 +34,7 @@ handleViewEvents =  (e) => {
   var name = document.querySelector('#name').value;
   console.log(name);
   qid = 1;
-    if(document.querySelector('#quiz-selection').value === "1"){
+    if((document.querySelector('#quiz-selection').value === "1") ||  (e.target.dataset.viewaction == "re-take")){
       quizId = "questionsQ1";
       console.log(quizId);
       backEndRestAPI(quizId, qid, "#quiz_view1");
@@ -45,7 +50,7 @@ handleViewEvents =  (e) => {
 //each question quiz 1
 console.log(qid);
 console.log(quizId);
-if((e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 1)){ //|| e.target.dataset.viewaction == "nextQuestion" 
+if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 1){ 
   backEndRestAPI(quizId, qid, "#quiz_view2");
   console.log(qid);
   console.log(counter);
@@ -80,17 +85,13 @@ else if(e.target.dataset.viewaction == "continue" && qid > 5 || counter/5 >= 0.8
 //}
 
 //return button
-//if (e.target.dataset.viewaction == "return") {
-  //qid = 0;
-  //backEndRestAPI("questionsQ1", 1, "#initialScreen");
-//}
+if (e.target.dataset.viewaction == "return") {
+  qid = 0;
+  backEndRestAPI("questionsQ1", 1, "#initialScreen");
+}
 
-//retake button
-//if (e.target.dataset.viewaction == "StartQuiz") {
-  //
-  //
-  //
-//}
+//re-take
+
 
 //if (e.target.type == 'radio') {
   if (e.target.dataset.viewaction == "nextQuestion") {
@@ -108,18 +109,19 @@ if(e.target.value == document.querySelector('#form').value){
   counter++;
   document.querySelector('#counter').innerHTML = counter;
   }
+  
  //incorrect screen
 else if(e.target.value !== document.querySelector('#form').value){
   backEndRestAPI(quizId, qid, "#incorrect");
   qid = qid + 1;
   document.querySelector('#counter').innerHTML = counter;
 }
+    
 return false;
 }
 
 return false;
 } //end of handleViewsEvent
-
 
 //Asynchronous Network Request
 async function backEndRestAPI(quizId,qid, view){
@@ -132,8 +134,6 @@ async function backEndRestAPI(quizId,qid, view){
   document.querySelector('#display-data').innerHTML = html_element;
     }
 
- 
-
   //Rendering View and Update DOM
   const renderView = (data, view) => {
       source = document.querySelector(view).innerHTML;
@@ -141,7 +141,6 @@ async function backEndRestAPI(quizId,qid, view){
       var html = template(data);
       return html;
 }
-
 
 
 
