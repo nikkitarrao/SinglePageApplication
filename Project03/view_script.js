@@ -49,39 +49,45 @@ handleViewEvents =  (e) => {
 console.log(qid);
 console.log(quizId);
 if((e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 1)){ //|| e.target.dataset.viewaction == "nextQuestion" 
-  qid = qid + 1;
   backEndRestAPI(quizId, qid, "#quiz_view2");
   console.log(qid);
 }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 2){
-qid = qid + 1;
 backEndRestAPI(quizId, qid, "#quiz_view1");
 console.log(qid);
 }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 3){
-  qid = qid + 1;
   backEndRestAPI(quizId, qid, "#quiz_view3");
   console.log(qid);
   }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 4){
 console.log(qid);
-qid = qid + 1;
 console.log(qid);
 backEndRestAPI(quizId, qid, "#quiz_view1");
-//qid = qid + 1;
 }
 //passed the test screen
-//else if(qid > 5 || counter/5 >= 0.8){
+//else if(e.target.dataset.viewaction == "continue" && qid > 5 || counter/5 >= 0.8){
   //backEndRestAPI(quizId, qid, "#finalScreenPassed");
   //document.querySelector('#name').innerHTML = name;
 //}
 //failed the test screen
-//else if(qid > 5 && counter/5 < 0.8){
+//else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 < 0.8){
  //backEndRestAPI(quizId, qid, "#finalScreenFailed");
   //document.querySelector('#name').innerHTML = name;
 //}
+
 //return button
+//if (e.target.dataset.viewaction == "return") {
+  //qid = 0;
+  //backEndRestAPI("questionsQ1", 1, "#initialScreen");
+//}
+
 //retake button
+//if (e.target.dataset.viewaction == "StartQuiz") {
+  //
+  //
+  //
+//}
 
 //if (e.target.type == 'radio') {
   if (e.target.dataset.viewaction == "nextQuestion") {
@@ -100,15 +106,10 @@ if(e.target.value == document.querySelector('#form').value){
  //incorrect screen
 else if(e.target.value !== document.querySelector('#form').value){
   backEndRestAPI(quizId, qid, "#incorrect");
+  qid = qid + 1;
 }
 return false;
 }
-
-//continue button on wrong screen
-//if(e.target.dataset.viewaction == ""){
-//console.log(qid);
-//console.log(quizId);
-//}
 
 
 
@@ -151,7 +152,3 @@ async function backEndRestAPI(quizId,qid, view){
  // }
 //return false;
 //}
-
-
-//}
-
