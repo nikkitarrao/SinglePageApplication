@@ -1,5 +1,5 @@
 //need to fix retake buttons
-//need to fix good work screen
+//need to fix good work screen, it never disappears, and only accepts the right answer for multiple choice
 //show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
