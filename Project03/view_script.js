@@ -1,6 +1,5 @@
-//if you get every question wrong it basically works
 //need to fix retake buttons
-//need to fix good work screen, it never disappears, and only accepts the right answer for multiple choice
+//need to fix good work screen
 //show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
@@ -29,7 +28,7 @@ handleViewEvents =  (e) => {
   var name = document.querySelector('#name').value;
   console.log(name);
   qid = 1;
-    if((document.querySelector('#quiz-selection').value === "1") ||  (e.target.dataset.viewaction == "re-take")){
+    if((document.querySelector('#quiz-selection').value === "1") ||  (e.target.dataset.viewaction == "re-take" &&quizId == "questionsQ1")){
       quizId = "questionsQ1";
       console.log(quizId);
       backEndRestAPI(quizId, qid, "#quiz_view1");
@@ -110,11 +109,20 @@ if (e.target.type == 'radio') {
     console.log(rightAnswer);
 //correct screen
 if(rightAnswer === true){
+    backEndRestAPI(quizId, qid , "#correct" )
      //setting the correct screen to show for only 1 second
     setTimeout(() => {
-    backEndRestAPI(quizId, qid , "#correct" );
+      if(qid == 1){
+        backEndRestAPI(quizId, qid+1 , "#quiz_view2");
+      }
+      else if(qid == 3){
+        backEndRestAPI(quizId, qid+1 , "#quiz_view3");
+      }
+      else if (qid == 2 || qid == 4){
+        backEndRestAPI(quizId, qid+1 , "#quiz_view1");
+      }
   }, 1000); // 1000 milliseconds = 1 second
-  qid = qid + 1;
+  //qid = qid + 1;
   counter++;
   document.querySelector('#counter').innerHTML = counter;
   }
@@ -123,7 +131,7 @@ if(rightAnswer === true){
  else if(rightAnswer === false){
   backEndRestAPI(quizId, qid, "#incorrect");
   qid = qid + 1;
-  document.querySelector('#counter').innerHTML = counter;
+ // document.querySelector('#counter').innerHTML = counter;
 }
 return false;
 }
@@ -155,6 +163,7 @@ async function backEndRestAPI(quizId,qid, view){
       var html = template(data);
       return html;
 }
+
 
 
 
