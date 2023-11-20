@@ -24,7 +24,7 @@ handleViewEvents =  (e) => {
   }
   if (e.target.dataset.viewaction == "startQuiz") {
   //saving user entered name
-  var name = document.querySelector('#name').value;
+  name = document.querySelector('#name').value;
   console.log(name);
   qid = 1;
     if((document.querySelector('#quiz-selection').value === "1")){
@@ -47,7 +47,7 @@ if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestion
   backEndRestAPI(quizId, qid, "#quiz_view2");
   console.log(qid);
   console.log(counter);
-  //document.querySelector('#counter').innerHTML = counter;
+ // document.querySelector('#counter').innerHTML = counter;
 }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 2){
 backEndRestAPI(quizId, qid, "#quiz_view1");
@@ -68,12 +68,17 @@ backEndRestAPI(quizId, qid, "#quiz_view1");
 //passed the test screen
 else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 >= 0.8){
   backEndRestAPI(quizId, qid, "#finalScreenPassed");
+  console.log(counter);
+  onsole.log(counter/5);
   document.querySelector('#name').innerHTML = name;
 }
 
 //failed the test screen
 else if(e.target.dataset.viewaction == "continue" && qid > 5 && counter/5 < 0.8){
  backEndRestAPI(quizId, qid, "#finalScreenFailed");
+ console.log(counter);
+ console.log(counter/5);
+ console.log(name);
   document.querySelector('#name').innerHTML = name;
 }
 
@@ -130,9 +135,9 @@ if(rightAnswer === true){
         console.log(qid);
         backEndRestAPI(quizId, qid , "#quiz_view1");
       }
-      else if (qid > 5 && counter/5 > 0.8){
+      else if (qid > 5 && counter/5 >= 0.8){
         console.log(qid);
-        backEndRestAPI(quizId, qid, "#finalScreenPasses");
+        backEndRestAPI(quizId, qid, "#finalScreenPassed");
       }
       else if (qid > 5 && counter/5 < 0.8){
         console.log(qid);
