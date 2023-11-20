@@ -1,3 +1,4 @@
+//If you get every question wrong it works
 //need to fix good work screen
 //show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
