@@ -1,4 +1,3 @@
-//If you get every question wrong it works
 //need to fix good work screen
 //show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
@@ -62,7 +61,7 @@ else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentque
   }
 else if(e.target.dataset.viewaction == "continue" && e.target.dataset.currentquestionid == 4){
 console.log(qid);
-console.log(qid);
+console.log(counter);
 backEndRestAPI(quizId, qid, "#quiz_view1");
 //document.querySelector('#counter').innerHTML = counter;
 }
@@ -114,17 +113,32 @@ if (e.target.type == 'radio') {
 //correct screen
 if(rightAnswer === true){
     backEndRestAPI(quizId, qid , "#correct" )
+    qid = qid +1;
      //setting the correct screen to show for only 1 second
     setTimeout(() => {
-      if(qid == 1){
-        backEndRestAPI(quizId, qid+1 , "#quiz_view2");
+      if(qid == 2){
+        console.log('qid:' + qid);
+        backEndRestAPI(quizId, qid , "#quiz_view2");
+        console.log('qid:' + qid);
       }
-      else if(qid == 3){
-        backEndRestAPI(quizId, qid+1 , "#quiz_view3");
+      else if(qid == 4){
+        console.log(qid);
+        backEndRestAPI(quizId, qid , "#quiz_view3");
+        console.log('qid:' + qid);
       }
-      else if (qid == 2 || qid == 4){
-        backEndRestAPI(quizId, qid+1 , "#quiz_view1");
+      else if (qid == 3 || qid == 5){
+        console.log(qid);
+        backEndRestAPI(quizId, qid , "#quiz_view1");
       }
+      else if (qid > 5 && counter/5 > 0.8){
+        console.log(qid);
+        backEndRestAPI(quizId, qid, "#finalScreenPasses");
+      }
+      else if (qid > 5 && counter/5 < 0.8){
+        console.log(qid);
+        backEndRestAPI(quizId, qid+1 , "#finalScreenFailed");
+      }
+
   }, 1000); // 1000 milliseconds = 1 second
   //qid = qid + 1;
   counter++;
