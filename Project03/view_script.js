@@ -1,4 +1,3 @@
-//need to fix retake buttons
 //need to fix good work screen
 //show the name on the end screens
 document.addEventListener('DOMContentLoaded', function() {
@@ -28,7 +27,7 @@ handleViewEvents =  (e) => {
   var name = document.querySelector('#name').value;
   console.log(name);
   qid = 1;
-    if((document.querySelector('#quiz-selection').value === "1") ||  (e.target.dataset.viewaction == "re-take" &&quizId == "questionsQ1")){
+    if((document.querySelector('#quiz-selection').value === "1")){
       quizId = "questionsQ1";
       console.log(quizId);
       backEndRestAPI(quizId, qid, "#quiz_view1");
@@ -85,6 +84,10 @@ if (e.target.dataset.viewaction == "return") {
 }
 
 //re-take
+if (e.target.dataset.viewaction == "re-take") {
+  qid = 1;
+  backEndRestAPI(quizId, 1, "#quiz_view1");
+}
 
 //saving values for the test
 if (e.target.type == 'radio') {
