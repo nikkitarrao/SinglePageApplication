@@ -1,5 +1,5 @@
-//need to fix good work screen
 //show the name on the end screens
+
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
   backEndRestAPI("questionsQ1", 1, "#initialScreen");
