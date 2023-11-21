@@ -1,6 +1,4 @@
-//show the name on the end screens
-//cant understand question 2
-//always marks question 4 wrong
+//show the name on the end screens doesnt work
 
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
@@ -26,7 +24,7 @@ handleViewEvents =  (e) => {
   }
   if (e.target.dataset.viewaction == "startQuiz") {
   //saving user entered name
-  name = document.querySelector('#name').value;
+  var name = document.querySelector('#name').value;
   console.log(name);
   qid = 1;
     if((document.querySelector('#quiz-selection').value === "1")){
@@ -96,7 +94,7 @@ if (e.target.dataset.viewaction == "re-take") {
   backEndRestAPI(quizId, 1, "#quiz_view1");
 }
 
-//saving values for the test
+//saving values for the test (multiple choice and image questions)
 if (e.target.type == 'radio') {
   if(e.target.value == document.querySelector('#form').dataset.correctChoice){
     rightAnswer = true;
@@ -111,6 +109,22 @@ if (e.target.type == 'radio') {
     console.log(rightAnswer);
   }
 }
+//saving values for the test (narrative questions)
+if (e.target.dataset.viewaction == "nextQuestion" && qid ==2) { 
+  if(document.querySelector('#narrativeAnswer').value == document.querySelector('#form').dataset.correctChoice){
+    rightAnswer = true;
+    console.log(e.target.value);
+    console.log(document.querySelector('#form').dataset.correctChoice);
+    console.log(rightAnswer);
+  }
+  else{
+    rightAnswer = false;
+    console.log(e.target.value);
+    console.log(document.querySelector('#form').dataset.correctChoice);
+    console.log(rightAnswer);
+  }
+}
+
 
 
 //screens depending on right or wrong
@@ -147,15 +161,16 @@ if(rightAnswer === true){
       }
 
   }, 1000); // 1000 milliseconds = 1 second
-  //qid = qid + 1;
   counter++;
   document.querySelector('#counter').innerHTML = counter;
+  rightAnswer = null;
   }
 
  //incorrect screen
  else if(rightAnswer === false){
   backEndRestAPI(quizId, qid, "#incorrect");
   qid = qid + 1;
+  rightAnswer = null;
  // document.querySelector('#counter').innerHTML = counter;
 }
 return false;
@@ -188,6 +203,8 @@ async function backEndRestAPI(quizId,qid, view){
       var html = template(data);
       return html;
 }
+
+
 
 
 
