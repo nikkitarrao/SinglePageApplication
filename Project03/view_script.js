@@ -1,4 +1,6 @@
 //show the name on the end screens
+//cant understand question 2
+//always marks question 4 wrong
 
 document.addEventListener('DOMContentLoaded', function() {
   //Rendering Initial View
